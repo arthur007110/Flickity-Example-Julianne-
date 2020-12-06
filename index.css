@@ -1,0 +1,74 @@
+* { box-sizing: border-box; }
+
+body { font-family: sans-serif; }
+
+.carousel {
+  background: slategray;
+}
+.produtos-carousel{
+    background-color: slategray;
+    padding-bottom: 5%;
+}
+.produtos-carousel-header{
+    color: white;
+    text-align: center;
+    font-family: fantasy;
+    font-size: large;
+}
+.galeria-carousel{
+    background-color: slategray;
+    padding-bottom: 5%;
+}
+.galeria-carousel-header{
+    color: white;
+    text-align: center;
+    font-family: fantasy;
+    font-size: large;
+}
+
+.link-produtos{
+    text-decoration: none;
+    color: deepskyblue;
+}
+
+.carousel-cell-produtos {
+  width: 20% !important; 
+  height: 300px;
+  margin-right: 10px;
+  background: #8C8;
+  border-radius: 5px;
+  text-align: center;
+  color: deepskyblue;
+  font-weight: bolder;
+}
+.carousel-cell {
+    width: 100% !important; 
+    height: 300px;
+    margin-right: 10px;
+    background: #8C8;
+    border-radius: 5px;
+    counter-increment: carousel-cell;
+}
+.carousel-cell-produtos.is-selected {
+    background: #ED2;
+}
+.carousel-cell.is-selected {
+  background: #ED2;
+}
+
+/* cell number */
+.carousel-cell-produtos:before {
+  display: block;
+  text-align: center;
+  line-height: 200px;
+  font-size: 80px;
+  color: white;
+}
+.carousel-cell:before {
+    display: block;
+    text-align: center;
+    content: counter(carousel-cell);
+    line-height: 200px;
+    font-size: 80px;
+    color: white;
+}

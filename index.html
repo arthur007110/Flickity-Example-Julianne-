@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Simple Slider using Flickity</title>
+        <!-- Referência para o css externo desta página -->
+        <link rel="stylesheet" href="index.css">
+
+        <!-- Referência para o css do flickity para fazer os carousels -->
+        <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+
+        <!-- Referência para o jquery para poder transformar uma div em um link -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <!-- Referência para o js externo dessa página -->
+        <script src="index.js"></script>
+    </head>
+
+    <style media="screen">
+        /* definindo a largura de uma celula do carousel para o maximo */
+        .carousel-cell {
+            width: 100%;
+        }
+
+        /* definindo cada celula como bloco */
+        .carousel-cell:before {
+            display: block;
+        }
+    </style>
+    <body>
+        <div class="produtos-carousel">
+            <div class="produtos-carousel-header">
+                <h2>
+                    Produtos
+                </h2>
+            </div>
+            <!-- a classe carousel vem do flickity e cria um carousel -->
+            <!-- a propriedade data-flickity permite que nós configuremos nosso carousel -->
+            <!-- wrapAround faz com que seja possivel passa da ultima celula para a primeira em um ciclo -->
+            <!-- groupCells define quantas celulas podem ser visualizadas por vez(atentarse para a largura das celular!) -->
+            <!-- draggable permite que o usuario possa arrastar com o mouse -->
+            <div class="carousel" data-flickity='{ "wrapAround": true, "groupCells": 4, "draggable": false}'>
+                <!-- a classe carousel-cell-produtos está sendo criada em nosso arquivo css e define o padrão de uma celula -->
+                <div id="google" class="carousel-cell-produtos">
+                    Google
+                    <a href="http://www.google.com"></a>
+                </div>
+                <div class="carousel-cell-produtos"></div>
+                <div class="carousel-cell-produtos"></div>
+                <div class="carousel-cell-produtos"></div>
+                <div class="carousel-cell-produtos"></div>
+                <div class="carousel-cell-produtos"></div>
+                <div class="carousel-cell-produtos"></div>
+                <div class="carousel-cell-produtos"></div>
+                <div class="carousel-cell-produtos"></div>
+                <div class="carousel-cell-produtos"></div>
+                <div class="carousel-cell-produtos"></div>
+            </div>
+        </div>
+        <div class="galeria-carousel">
+            <div class="galeria-carousel-header">
+                <h2>
+                    Imagens
+                </h2>
+            </div>
+            <div class="carousel" data-flickity='{ "wrapAround": true, "groupCells": 1}'>
+                <div class="carousel-cell"></div>
+                <div class="carousel-cell"></div>
+                <div class="carousel-cell"></div>
+                <div class="carousel-cell"></div>
+                <div class="carousel-cell"></div>
+                <div class="carousel-cell"></div>
+                <div class="carousel-cell"></div>
+                <div class="carousel-cell"></div>
+                <div class="carousel-cell"></div>
+                <div class="carousel-cell"></div>
+                <div class="carousel-cell"></div>
+            </div>
+        </div>
+        <!-- Referência para o js do flickity -->
+        <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    </body>
+</html>
